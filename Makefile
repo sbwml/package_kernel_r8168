@@ -28,20 +28,8 @@ define Package/r8168/description
   This package contains a driver for Realtek r8168 chipsets.
 endef
 
-R8168_MAKEOPTS= -C $(PKG_BUILD_DIR) \
-	PATH="$(TARGET_PATH)" \
-	ARCH="$(LINUX_KARCH)" \
-	CROSS_COMPILE="$(TARGET_CROSS)" \
-	TARGET="$(HAL_TARGET)" \
-	TOOLPREFIX="$(KERNEL_CROSS)" \
-	TOOLPATH="$(KERNEL_CROSS)" \
-	KERNELPATH="$(LINUX_DIR)" \
-	KERNELDIR="$(LINUX_DIR)" \
-	LDOPTS=" " \
-	DOMULTI=1
-
 define Build/Compile
-	$(MAKE) $(R8168_MAKEOPTS) modules
+	$(KERNEL_MAKE) M=$(PKG_BUILD_DIR) modules
 endef
 
 $(eval $(call KernelPackage,r8168))
