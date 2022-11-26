@@ -1,5 +1,5 @@
 diff --git a/r8168_n.c b/r8168_n.c
-index cd868ad..d1ad5aa 100644
+index 7e9e2ea..7d89701 100644
 --- a/r8168_n.c
 +++ b/r8168_n.c
 @@ -47,6 +47,7 @@
@@ -10,7 +10,7 @@ index cd868ad..d1ad5aa 100644
  #include <linux/if_vlan.h>
  #include <linux/crc32.h>
  #include <linux/interrupt.h>
-@@ -24643,6 +24644,22 @@ rtl8168_set_bios_setting(struct net_device *dev)
+@@ -24769,6 +24770,22 @@ rtl8168_set_bios_setting(struct net_device *dev)
          }
  }
  
@@ -33,7 +33,7 @@ index cd868ad..d1ad5aa 100644
  static void
  rtl8168_init_software_variable(struct net_device *dev)
  {
-@@ -25206,6 +25223,8 @@ rtl8168_init_software_variable(struct net_device *dev)
+@@ -25343,6 +25360,8 @@ rtl8168_init_software_variable(struct net_device *dev)
                  tp->NotWrMcuPatchCode = TRUE;
          }
  
